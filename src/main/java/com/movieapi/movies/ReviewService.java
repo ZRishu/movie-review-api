@@ -16,6 +16,10 @@ public class ReviewService {
     private MongoTemplate mongoTemplate;
 
     public Review createReview(String reviewBody, String imdbId) {
+        if(reviewBody == null || reviewBody.trim().isEmpty()) {
+            throw new IllegalArgumentException("Review body can't be empty");
+        }
+
         Review review = reviewRepository.insert(new Review(reviewBody));
 
         mongoTemplate.update(Movie.class)
