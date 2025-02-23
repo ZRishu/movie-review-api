@@ -59,18 +59,18 @@ A RESTful API built with Spring Boot that manages movies and their reviews. The 
 ## Example Usage
 
 ### Get All Movies
-```bash
-curl http://localhost:8080/api/v1/movies
-```
+  ```bash
+  curl http://localhost:8080/api/v1/movies
+  ```
 
 ### Get Single Movie
-```bash
-curl http://localhost:8080/api/v1/movies/tt1234567
-```
+  ```bash
+  curl http://localhost:8080/api/v1/movies/tt1234567
+  ```
 
 ### Create Review
-```bash
-curl -X POST http://localhost:8080/api/v1/reviews \
--H "Content-Type: application/json" \
--d '{"reviewBody": "Great movie!", "imdbId": "tt1234567"}'
-```
+  ```bash
+  curl -X POST http://localhost:8080/api/v1/reviews \
+  -H "Content-Type: application/json" \
+  -d '{"reviewBody": "Great movie!", "imdbId": "tt1234567"}'
+  ```
