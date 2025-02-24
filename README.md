@@ -49,12 +49,39 @@ A RESTful API built with Spring Boot that manages movies and their reviews. The 
 
 ## Setup and Installation
 
-1. Ensure you have MongoDB installed and running
-2. Clone the repository
-3. Configure MongoDB connection in `application.properties`
-4. Run the Spring Boot application:
-   ```bash
-   ./mvnw spring-boot:run
+### Prerequisites
+- Java 17 or higher
+- MongoDB 4.4 or higher
+- Maven
+### Local Development Setup
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/movie-review-api.git
+cd movie-review-api
+```
+
+2. Configure MongoDB
+```bash
+nano src/main/resources/application.properties
+```
+```properties
+# application.properties
+spring.application.name=movies
+spring.data.mongodb.database=<mongodb_database>
+spring.data.mongodb.uri=mongodb+srv://<mongodb_username>:<mongob_password>@<mongodb_cluster>
+
+```
+
+3. Build the project
+```bash
+./mvnw clean install
+```
+
+4. Run the application
+```bash
+./mvnw spring-boot:run
+```
 
 ## Example Usage
 
